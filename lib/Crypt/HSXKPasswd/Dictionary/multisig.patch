@@ -1,0 +1,18 @@
+--- Crypt-HSXKPasswd-v3.6.orig/lib/Crypt/HSXKPasswd/Dictionary/Basic.pm	2015-08-11 22:37:07.000000000 +0200
++++ Crypt-HSXKPasswd-v3.6/lib/Crypt/HSXKPasswd/Dictionary/Basic.pm	2023-01-02 22:30:34.161808640 +0100
+@@ -216,7 +216,7 @@
+     # validate args
+     state $args_check = multisig(
+         [NonEmptyString, Optional[Maybe[NonEmptyString]]],
+-        [ArrayRef[Str]], Optional[Item],
++        [ArrayRef[Str], Optional[Item]],
+     );
+     my ($dict_source, $encoding) = $args_check->(@args);
+     
+@@ -272,4 +272,4 @@
+     return $self;
+ }
+ 
+-1; # because Perl is just a little bit odd :)
+\ No newline at end of file
++1; # because Perl is just a little bit odd :)
